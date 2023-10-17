@@ -44,7 +44,7 @@ public class Database {
         ArrayList<User> tempList = new ArrayList<User>();
         try {
             while (resultSet.next()) {
-                tempList.add(new User(Integer.parseInt(resultSet.getString("id")),
+                tempList.add(new User(resultSet.getInt("id"),
                         resultSet.getString("name"),
                         resultSet.getString("type"),
                         resultSet.getString("email")));
